@@ -1,0 +1,272 @@
+/* Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+/* Color variables */
+
+:root
+{
+    --background-color: #1b1b1bff;
+    --background-color-header_footer: #000000ff;
+    --background-bibtex: #4b4a48ff;
+    --text-color: #f5f5f7ff;
+    --general-color: #d6c378ff;
+    --color-link: #8b8bb4ff;
+}
+
+
+/* General styles */
+
+h1, h2
+{
+    text-align: center;
+}
+
+h2
+{
+    color: var(--general-color);
+    font-weight: 200;
+    font-size: 3rem;
+}
+
+p
+{
+    font-weight: 200;
+    font-size: 1.3rem;
+    text-align: justify;
+    overflow-wrap: break-word;
+    line-height: 1.5em;
+    padding: 15px;
+}
+
+figure
+{
+    text-align: center;
+    margin: 50px;
+}
+
+img
+{
+    width: 100%;
+    height: auto;
+    max-width: 960px;
+    margin-bottom: 1rem;
+}
+
+.figure-caption
+{
+    font-weight: 100;
+    font-size: 1rem;
+    line-height: 1.5em;
+}
+
+
+/* Approximatly from top to bottom in the page */
+
+body
+{
+    background-color: var(--background-color);
+    margin: 0px;
+}
+
+.container-header
+{
+    background-color: var(--background-color-header_footer);
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.container-main
+{
+    background-color: var(--background-color);
+}
+
+main, header, footer
+{
+    color: var(--text-color);
+    font-family: Inter, sans-serif;
+    margin: auto;
+}
+
+main
+{
+    background-color: var(--background-color);
+}
+
+header
+{
+    background-color: var(--background-color-header_footer);
+    border: none;
+    padding: 15px;
+}
+
+.title-short-name, .title-long
+{
+    color: var(--general-color);
+    display: block;
+}
+
+.title-short-name
+{
+    font-weight: 700;
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+.title-long
+{
+    font-weight: 200;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.authors, .universities
+{
+    font-weight: 400;
+    font-size: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.author, .university
+{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.link-header
+{
+    color: var(--color-link);
+    text-decoration: none;
+}
+
+.link-header:hover
+{
+    text-decoration: underline;
+}
+
+.buttons
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;    /*space-evenly*/
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.button-link
+{
+    font-weight: 400;
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background-color: var(--general-color);
+    color: var(--background-color);
+    margin: 10px;
+}
+
+.button-link:hover
+{
+    cursor: pointer;
+}
+
+.button-link:active
+{
+    background-color: var(--text-color);
+}
+
+.licence
+{
+    font-weight: 500;
+}
+
+footer
+{
+    background-color: var(--background-color-header_footer);
+    color: var(--text-color);
+    font-weight: 200;
+    font-size: 0.8rem;
+    padding: 25px;
+    text-align: center;
+    overflow-wrap: break-word;
+}
+
+.text-footer
+{
+    padding: 5px;
+}
+
+.bibtex-text
+{
+    overflow-x: auto;
+    background-color: var(--background-bibtex);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 50px;
+}
+
+.mailto-link
+{
+    color: var(--general-color);
+}
+
+
+/* Adapt to screen size */
+
+@media screen and (min-width: 1024px)
+{
+    main, header, figure
+    {
+        max-width: 960px;
+    }
+}
+
+@media screen and (max-width: 768px)
+{
+    .title-short-name
+    {
+        font-size: 3.5rem; /*5rem;*/
+    }
+
+    .title-long
+    {
+        font-size: 2rem; /*2.5rem;*/
+    }
+
+    .authors
+    {
+        font-size: 1.3rem; /*1.5rem;*/
+    }
+
+    .universities
+    {
+        font-size: 1.3rem; /*1.5rem;*/
+    }
+
+    .button-link
+    {
+        font-size: 1.3rem; /*1.5rem;*/
+    }
+
+    footer
+    {
+        font-size: 0.6; /*0.8rem;*/
+    }
+}
+
+
+/*
+568px
+768px
+992px
+1024px
+1280px
+*/
